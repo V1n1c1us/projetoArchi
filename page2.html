@@ -7,26 +7,25 @@
 
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styleScroll.css">
 	
 	<link href="css/animate.css" rel="stylesheet">
 	<style>
-hr.separator {
+	hr.separator {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-
+.slideScroll{
+   position: relative;
+   padding: 25vh 10%;
+	transform-style: inherit;
+}
 #titleScroll {
   background-image: url('imgScroll.jpg');
    background-attachment: fixed;  
  }
-.slideScroll {
-   position: relative;
-  padding: 25vh 10%;
-
-
-	transform-style: inherit;
-}
+	
 	</style>
 </head>
 <body>
@@ -169,15 +168,19 @@ hr.separator {
 				</div>
 			</div>
 		</div>
+       
+    </div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<section class="module parallax parallax-1">
+				<h1>Serene</h1> 
+			</section>
+		</div>
+	  </div>
 	</div>
 	<div class="container-fluid">
-		<div id="titleScroll" class="slideScroll header">
-			<h1>Pure CSS Parallax</h1>
-		</div>
-	</div>
-        <hr>
-
-        <!-- Footer -->
+	 <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
@@ -187,7 +190,9 @@ hr.separator {
             <!-- /.row -->
         </footer>
 
-    </div>
+	
+	</div>
+	
     <!-- /.container -->
 
     <!-- jQuery -->
