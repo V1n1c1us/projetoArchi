@@ -1,0 +1,91 @@
+.filtr-item {
+    padding: 1rem;
+}
+.item-desc {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+/* Filter controls */
+.simplefilter li, .multifilter li, .sortandshuffle li {
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+}
+/*.simplefilter li {
+    background-color: #585858;
+}
+.simplefilter li.active {
+    background-color: #212121;
+}
+.multifilter li {
+    background-color: #4b9eff;
+}
+.multifilter li.active {
+    background-color: #2265b4;
+}*/
+
+/* Shuffle and sort controls */
+/*select {
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+}
+.sortandshuffle .shuffle-btn {
+    background-color: #dec800;
+}
+.sortandshuffle .sort-btn {
+    background-color: #de0000;
+}
+.sortandshuffle .sort-btn.active {
+    background-color: #9d0000;
+}*/
+
+
+ul#menu {
+    margin-top: 5%;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0;
+    font-weight: 400;
+}
+
+ul#menu li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+#menu {
+    outline:none;
+    padding: 10px 20px 8px 20px;
+    color: #888;
+    font-size:11px;
+    letter-spacing:3px;
+    text-decoration: none;
+    text-transform:uppercase;
+    //background:#eee;
+    border:none !important;
+}
+
+#menu a {
+    color:#888;
+    border: solid 1px #555;
+}
+
+#menu a:hover {
+    background:#111;
+}
+
+#menu a.selected {
+    border-color: #FAB702;
+    outline: 0px;
+}

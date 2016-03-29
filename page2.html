@@ -8,7 +8,7 @@
         <!-- Custom CSS -->
         <link href="css/full-slider.css" rel="stylesheet">
         <link rel="stylesheet" href="css/styleScroll.css">
-
+        <link href="css/filter.css" rel="stylesheet" type="text/css"/>
         <link href="css/animate.css" rel="stylesheet">
         <style>
             hr.separator {
@@ -25,44 +25,7 @@
                 background-image: url('imgScroll.jpg');
                 background-attachment: fixed;  
             }
-            ul#menu {
-                margin-top: 5%;
-                font-size: 12px;
-                letter-spacing: 1px;
-                padding: 0;
-                font-weight: 400;
-            }
 
-            ul#menu li {
-                display: inline-block;
-                margin-right: 5px;
-                margin-bottom: 10px;
-            }
-            #menu a {
-                outline:none;
-                padding: 10px 20px 8px 20px;
-                color: #888;
-                font-size:11px;
-                letter-spacing:3px;
-                text-decoration: none;
-                text-transform:uppercase;
-                //background:#eee;
-                border:none !important;
-            }
-
-            #menu a {
-                color:#888;
-                border: solid 1px #555;
-            }
-
-            #menu a:hover {
-                background:#111;
-            }
-
-            #menu a.selected {
-                border-color: #FAB702;
-                outline: 0px;
-            }
         </style>
     </head>
     <body>
@@ -283,30 +246,70 @@
             </div>
 
         </div>
-        <div class="container-fluid">
+        <div class="container">
+            <!-- Filter Controls - Simple Mode -->
             <div class="row">
                 <div class="col-lg-12 text-center">
+                    <!-- A basic setup of simple mode filter controls, all you have to do is use data-filter="all"
+                    for an unfiltered gallery and then the values of your categories to filter between them -->
                     <ul id="menu">
-                        <li><a href="" class="selected">All Projects</a></li>
-                        <li><a href="">Commercial</a></li>
-                        <li><a href="">Hospitaly</a></li>
-                        <li><a href="">Office</a></li>
-                        <li><a href="">Residential</a></li>
+                        <li data-filter="all">All Projects</li>
+                        <li data-filter="1">Commercial</li>
+                        <li data-filter="2">Hospitaly</li>
+                        <li data-filter="3">Office</li>
+                        <li data-filter="4">Residential</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3">
-
+                <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
+                attribute, which starts from the value 1 and goes up from there -->
+                <div class="filtr-container">
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="Busy streets">
+                        <img class="img-responsive" src="img/city_1.jpg" alt="sample image">
+                        <span class="item-desc">Busy Streets</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5" data-sort="Luminous night">
+                        <img class="img-responsive" src="img/nature_2.jpg" alt="sample image">
+                        <span class="item-desc">Luminous night</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
+                        <img class="img-responsive" src="img/city_3.jpg" alt="sample image">
+                        <span class="item-desc">city wonders</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production">
+                        <img class="img-responsive" src="img/industrial_1.jpg" alt="sample image">
+                        <span class="item-desc">in production</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site">
+                        <img class="img-responsive" src="img/industrial_2.jpg" alt="sample image">
+                        <span class="item-desc">industrial site</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
+                        <img class="img-responsive" src="img/nature_1.jpg" alt="sample image">
+                        <span class="item-desc">peaceful lake</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="City lights">
+                        <img class="img-responsive" src="img/city_2.jpg" alt="sample image">
+                        <span class="item-desc">city lights</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
+                        <img class="img-responsive" src="img/nature_3.jpg" alt="sample image">
+                        <span class="item-desc">dreamhouse</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines">
+                        <img class="img-responsive" src="img/industrial_3.jpg" alt="sample image">
+                        <span class="item-desc">restless machines</span>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-
-                </div>
-                <div class="col-lg-3">
-
-                </div>
-                <div class="col-lg-3">
-
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12" >
+                    <section style="background-color: #FAB702;">
+                        
+                    </section>
                 </div>
             </div>
         </div>
@@ -342,5 +345,14 @@
         <script>
             new WOW().init();
         </script>
+        <script src="js/jquery.filterizr.js"></script>
+        <script src="js/controls.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //Initialize filterizr with default options
+                $('.filtr-container').filterizr();
+            });
+        </script>
+
     </body>
 </html>
